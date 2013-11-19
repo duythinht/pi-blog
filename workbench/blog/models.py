@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from markdown import markdown
+from html2text import html2text
 
 
 class Entry(models.Model):
@@ -23,8 +24,8 @@ class Entry(models.Model):
 
     def get_description(self):
         if len(self.excerpt) > 0:
-            return self.excerpt
-        return self.content[:360]
+            return html2text(self.excerpt)
+        return html2text(self.content[:360])
 
     def get_excerpt(self):
         if len(self.excerpt) > 0:
