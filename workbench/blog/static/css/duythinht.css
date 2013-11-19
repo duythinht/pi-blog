@@ -57,6 +57,17 @@ footer {
     content: '';
 }
 
+.entry-content img {
+    display: block;
+    max-width: 100%;
+}
+
+.entry iframe {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
 /* Track system */
 
 .track-list {
@@ -76,4 +87,9 @@ footer {
 
 .track .link, .track .created {
     padding-bottom: 0.5em;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
