@@ -60,12 +60,13 @@ footer {
 .entry-content img {
     display: block;
     max-width: 100%;
+    margin: 0 auto;
 }
 
 .entry iframe {
     display: block;
-    height: auto;
     max-width: 100%;
+    margin: 0 auto;
 }
 
 /* Track system */
