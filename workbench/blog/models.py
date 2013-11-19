@@ -21,10 +21,15 @@ class Entry(models.Model):
     def markdown(self):
         return markdown(self.content)
 
+    def get_description(self):
+        if len(self.excerpt) > 0:
+            return self.excerpt
+        return self.content[:360]
+
     def get_excerpt(self):
         if len(self.excerpt) > 0:
             return markdown(self.excerpt)
-        return markdown(self.content[:500])
+        return markdown(self.content[:360])
 
     def get_url(self):
         return reverse('blog.detail', args=[str(self.id)])

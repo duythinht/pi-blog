@@ -4,6 +4,14 @@
     {{ entry.title }}
 {% endblock %}
 
+{% block meta_description %}
+    {{ entry.get_description }}
+{% endblock %}
+
+{% block meta_keywords %}
+    {{ entry.tags }}
+{% endblock %}
+
 {% block content %}
 <div class="entry">
     <div class="entry-header">
