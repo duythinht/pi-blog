@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Hello!
+{% endblock %}
+
+{% block content %}
+
+<h4># Tracking</h4>
+<div class="track-list">
+    {% for track in object_list %}
+    <div class="track row">
+        <div class="col-md-9">
+            <div class="text">{{ track.text }}</div>
+            <div class="link"><a href="{{ track.link }}">{{ track.link }}</a></div>
+        </div>
+        <div class="col-md-3">
+            <div class="detector">{{ track.detector }}</div>
+            <div class="created">{{ track.created }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

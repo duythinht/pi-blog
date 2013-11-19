@@ -1,0 +1,79 @@
+/**
+ * @copyright 2013
+ * @author: Thinh T.
+ * @email: duythinht@gmail.com
+ *
+ */
+
+body {
+    background: #282828;
+}
+
+pre {
+    background: #002b36;
+}
+
+.wrapper {
+    padding: 0 30px;
+    background: #f9f9f9;
+    max-width: 960px;
+}
+
+header .navigation {
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+header .navigation > ul {
+    margin: 0;
+    list-style: none;
+}
+
+header .navigation > ul > li {
+    margin: 5px 15px;
+    display: inline-block;
+}
+
+footer {
+    text-align: center;
+    line-height: 5em;
+}
+
+.entry-header .meta {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #adadad;
+}
+
+.entry-footer .tag a {
+    color: #e38d13;
+}
+
+.entry-footer .tag::after {
+    content: ',';
+}
+
+.entry-footer .tag:last-child::after {
+    content: '';
+}
+
+/* Track system */
+
+.track-list {
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 0 15px;
+}
+.track {
+    border-bottom: 1px solid#e0e0e0;
+}
+
+.track .text, .track .detector {
+    padding-top: 0.5em;
+}
+
+.track .link, .track .created {
+    padding-bottom: 0.5em;
+}

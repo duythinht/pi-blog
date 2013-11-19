@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Entry List
+{% endblock %}
+
+{% block content %}
+<div class="entry_list">
+    {% for entry in object_list %}
+    <div class="entry">
+        <div class="entry-header">
+            <h3><a href="{% url 'blog.detail' entry.id %}">{{ entry.title }}</a></h3>
+            <div class="meta">Post by: {{ entry.author }} at {{ entry.created }}</div>
+        </div>    
+        <div class="entry-content">
+            {{ entry.get_excerpt|safe }}
+        </div>
+        <div class="entry-footer">
+            Tags:
+            {% for tag in entry.get_tags %}
+                <span class="tag"><a href="{% url 'blog.tags' tag.strip %}">{{ tag }}</a></span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
